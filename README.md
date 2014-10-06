@@ -1,13 +1,11 @@
 Interactor Sample
 ================
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-[Check the demo]()
+[Check the demo](http://interactor-sample.herokuapp.com)
 
 This is a simple app using the Interactor gem.
 
-## What does this app do ?
+### What does this app do ?
 
 * Use interactors in order to handle the new comment
   * One interactor to actually store the comment
