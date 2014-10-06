@@ -1,0 +1,45 @@
+.page-header
+  h2 Interactor simple app - The Guestbook
+
+- if @comments.any?
+  - @comments.each do |comment|
+    .author= "#{comment.created_at} ~ #{comment.email}"
+    .comment= comment.comment
+- else
+  .alert.alert-info
+    strong There is no comment.
+    span  Be the first!
+
+= paginate @comments
+
+h2 Add your comment
+
+= form_for(@new_comment, url: comments_path, html: { role: 'form' }) do |f|
+  .form-group
+    = f.label :email
+    = f.text_field :email, class: 'form-control'
+  .form-group
+    = f.label 'Your lovely comment'
+    = f.text_area :comment, class: 'form-control'
+  .checkbox
+    label
+      = check_box_tag :fake_fail
+      | Make it fail
+  .form-group
+    = f.submit 'Add a comment', class: 'btn btn-success pull-right'
+
+.clearfix
+hr
+h3 What does this app do ?
+ul
+  li Use interactors in order to handle the new comment
+  ul
+    li One interactor to actually store the comment
+    li One to send a ThankYou message to the commenter (not really send anything)
+    li One to log the event through a Mixpanel kind of app (not really logging anything)
+  li Show an example of a rollback, just check the box before adding a comment
+  li The code also contains some test best practices
+hr
+ul
+  li <a href='http://github.com/beNjiox/interactor-sample'> The source code </a>
+  li <a href='https://github.com/collectiveidea/interactor'> Interactor GitHub page </a>

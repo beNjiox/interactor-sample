@@ -1,0 +1,16 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$comment-color : #AAAAAA;
+
+.author {
+  font-variant: small-caps;
+  color: $comment-color;
+}
+
+.comment {
+  border-left: 3px solid $comment-color;
+  padding: 10px;
+}
+

@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+#flashs {
+  padding-top:30px;
+}
