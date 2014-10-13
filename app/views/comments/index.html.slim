@@ -3,7 +3,7 @@
 
 - if @comments.any?
   - @comments.each do |comment|
-    .author= "#{comment.created_at} ~ #{comment.email}"
+    .author= "#{comment.created_at} ~ #{comment.nickname}"
     .comment= comment.comment
 - else
   .alert.alert-info
@@ -16,8 +16,8 @@ h2 Add your comment
 
 = form_for(@new_comment, url: comments_path, html: { role: 'form' }) do |f|
   .form-group
-    = f.label :email
-    = f.text_field :email, class: 'form-control'
+    = f.label :nickname
+    = f.text_field :nickname, class: 'form-control'
   .form-group
     = f.label 'Your lovely comment'
     = f.text_area :comment, class: 'form-control'

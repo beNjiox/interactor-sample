@@ -1,7 +1,7 @@
 class CreateComments < ActiveRecord::Migration
   def change
     create_table :comments do |t|
-      t.string :email
+      t.string :nickname
       t.text :comment
 
       t.timestamps

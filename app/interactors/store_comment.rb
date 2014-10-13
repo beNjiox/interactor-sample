@@ -1,5 +1,8 @@
 class StoreComment
   include Interactor
+  # This includes a module which add hooks to this interactor
+  # It's an example of Multiple Hook handling with Interactor
+  include TimeInteractor
 
   before do
     context.comment = Comment.new(context.comment_params)
